@@ -19,11 +19,11 @@ English Preview : https://streamable.com/czvc7d <br>
 - ⭐ RageUi : https://github.com/iTexZoz/RageUI <br>
 
 <h3> 💻 Installation </h3>
-- Download this repository.
-- Open that and choice french or english following your language.
-- Then, you have a aVip resource. Put that in your resourcer folder on your server.
-- To finish, ensure aVip in your server.cfg, and configure the script and go to test !
-- Enjoy :p
+- Download this repository. <br>
+- Open that and choice french or english following your language. <br>
+- Then, you have a aVip resource. Put that in your resourcer folder on your server. <br>
+- To finish, ensure aVip in your server.cfg, and configure the script and go to test ! <br>
+- Enjoy :p <br>
 
 <h4> 📱 You want to contact me for problem ? </h4>
 - 💻 My Discord : A̴k̴a̴s̴h̴i̴#0001<br>
