@@ -244,12 +244,16 @@ function openVIPMenu()
                                     if not IsPedSittingInAnyVehicle(PlayerPedId()) then
                                         ESX.ShowAdvancedNotification('Information', 'VIP', '~r~Vous n\'êtes pas dans un véhicule.', 'CHAR_SOCIAL_CLUB', 1)
                                         activeXenon = false
-                                        return false
                                     else
                                         activeXenon = true
                                         enabled_xenon = true
-                                        ToggleVehicleMod(pVeh, 22, true)
-                                        return true
+                                        local player_vehicle = GetVehiclePedIsIn(PlayerPedId(), true)
+                                        SetVehicleModKit(player_vehicle, 0)
+                                        ToggleVehicleMod(player_vehicle, 18, true)
+                                        SetVehicleWindowTint(player_vehicle, 2)
+                                        ToggleVehicleMod(player_vehicle, 22, true)
+                                        SetVehicleWindowTint(player_vehicle, 3)
+                                        ToggleVehicleMod(player_vehicle, 20, true)
                                     end
                                     else
                                         activeXenon = false
