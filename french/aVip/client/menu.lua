@@ -655,7 +655,15 @@ function openVIPMenu()
                             RageUI.ButtonWithStyle(k, "Spawn le props suivant : ~b~"..k, {RightLabel = "→→"}, not spawn_props_acess, function(_,a,s)
                                 if s then
                                     spawn_props_acess = true
-                                    SpawnVipProps()
+                                    while not HasModelLoaded(v) do Citizen.Wait(10) end
+                                    local coords, forward = GetEntityCoords(PlayerPedId()), GetEntityForwardVector(PlayerPedId())
+                                    local props_coords = coords + forward * 1.0
+                                    ESX.Game.SpawnObject(v, props_coords, function(props) 
+                                        SetEntityHeading(props, GetEntityHeading(PlayerPedId()))
+                                        PlaceObjectOnGroundProperly(props)
+                                        FreezeEntityPosition(props, true)
+                                        SetEntityInvincible(props, true)
+                                        end)
                                     Citizen.SetTimeout(Vip.CooldownOptions.CooldownSpawnProps, function()
                                         spawn_props_acess = false
                                     end)
